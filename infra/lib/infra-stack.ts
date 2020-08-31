@@ -15,5 +15,6 @@ export class InfraStack extends cdk.Stack {
     });
 
     fleet.expireAfter(cdk.Duration.hours(2));
+    fleet.defaultSecurityGroup.connections.allowFromAnyIpv4(ec2.Port.tcp(80));
   }
 }
