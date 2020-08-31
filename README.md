@@ -25,7 +25,7 @@ mv kuebctl /usr/local/bin/
 # install k3d 
 curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 
-# k3d create cluster
+# k3d create cluster named portainer
 k3d cluster create portainer \
 --api-port 6443 \
 --servers 1 \
