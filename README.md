@@ -60,6 +60,7 @@ k3d cluster delete portainer
 ```bash
 cdk destroy -f 
 ```
+![delete cdk-spot-one](./images/delete-cdk-spot-one.png)
 
 ## Usege: 
 - [cdk-spot-one](https://github.com/pahud/cdk-spot-one)
