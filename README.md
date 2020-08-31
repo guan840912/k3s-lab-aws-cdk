@@ -3,6 +3,7 @@
 ### Infra 
 ```bash
 # create infra
+cd infra/
 cdk deploy --require-approval never 
 
 # connect k3s node
@@ -40,6 +41,26 @@ curl -LO https://raw.githubusercontent.com/portainer/portainer-k8s/master/portai
 ```
 ![create portainer](./images/create-portainer.png)
 ![portainer console](./images/portainer-console.png)
+
+# List k3s node
+```bash
+k3d node list
+NAME                     ROLE           CLUSTER     STATUS
+k3d-portainer-agent-0    agent          portainer   running
+k3d-portainer-server-0   server         portainer   running
+k3d-portainer-serverlb   loadbalancer   portainer   running
+```
+#
+```bash
+k3d cluster delete portainer
+```
+![k3d cluster delete](./images/k3d-delete-cluster.png)
+
+### Delete Infra
+```bash
+cdk destroy -f 
+```
+
 ## Usege: 
 - [cdk-spot-one](https://github.com/pahud/cdk-spot-one)
 - [k3d](https://k3d.io/)
